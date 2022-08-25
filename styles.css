@@ -1,0 +1,67 @@
+*{
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: linear-gradient(to right, #191e22, #8dbbde);
+}
+
+.grid-container{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 110vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.grid-container > button{
+    cursor: pointer;
+    font-size: 2rem;
+    border: none;
+    outline: none;
+    background-color: #111;
+    color: #eee;
+}
+
+.grid-container > .operador{
+    background-color: #3a729c;
+}
+
+.duas-colunas{
+    grid-column: span 2;
+}
+
+.grid-container > .display{
+    grid-column: 1/-1;
+    background: #222;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.grid-container > button:hover{
+    background-color: #eee;
+    color: #111;
+}
+
+.grid-container > .display > .antes{
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.5rem;
+}
+
+.grid-container > .display > .agora{
+    color: white;
+    font-size: 2.5rem;
+}
+
+
+
